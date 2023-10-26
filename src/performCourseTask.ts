@@ -1,9 +1,9 @@
-import { apiKey, baseUrl } from "./consts";
+import { baseUrl } from "./consts";
 
 const fetchToken = async (taskName: string) => {
   const taskPath = `/token/${taskName}`;
   const body = {
-    apikey: apiKey,
+    apikey: `${process.env.AI_DEVS_API_KEY}`,
   };
   const token = await fetch(`${baseUrl}${taskPath}`, {
     method: "POST",
