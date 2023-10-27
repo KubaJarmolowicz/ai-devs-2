@@ -1,7 +1,8 @@
 import { MODELS } from "./consts";
-import { OpenAIService } from "./openAIService";
+import { OpenAIService } from "./services/openAIService";
+import { ChatCompletionMessageParam } from "openai/resources";
 
-const messages: OpenAI.ChatCompletionMessageParam[] = [
+const messages: ChatCompletionMessageParam[] = [
   { role: "user", content: "Greet my dear and lovely Anna!" },
 ];
 
@@ -16,9 +17,12 @@ export const testIntegration = async () => {
     const choices = res.choices || [];
     if (choices.length) {
       const latestResponse = choices[choices.length - 1]?.message;
-      console.log("SUCCESS ### =>", latestResponse);
+      console.log(
+        "SUCCESSFUL TEST INTEGRATION. HERE'S ASSISSTANT'S RESPONSE ### =>",
+        latestResponse
+      );
     }
   } catch (e) {
-    console.log("ERROR :(( =>", e);
+    console.error("ERROR in testIntegration =>", e);
   }
 };
