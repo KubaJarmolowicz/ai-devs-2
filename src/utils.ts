@@ -13,10 +13,19 @@ export const getNonStreamingChatMsg = (
     { role: "system", content: system },
   ];
 
-  const model = MODELS.GPT_3_5_turbo;
+  const model = MODELS.GPT_4;
 
   return {
     messages,
     model,
   };
+};
+export const getSimulatedFormData = (data: {
+  [key: string]: string;
+}): FormData => {
+  const formData = new FormData();
+  const entries = Object.entries(data);
+  entries.map((entry) => formData.append(entry[0], entry[1]));
+
+  return formData;
 };

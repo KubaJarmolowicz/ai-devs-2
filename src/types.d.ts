@@ -18,4 +18,20 @@ declare namespace AIDevsAPI {
       [key as string]: unknown;
     };
   }
+
+  type CourseTaskAdditionalParams = {
+    task?: {
+      body?: {
+        question?: string;
+      };
+      meta?: {
+        asJSON?: booelan;
+      };
+    };
+    answer?: {
+      meta?: {
+        asJSON?: booelan;
+      };
+    };
+  };
 }
