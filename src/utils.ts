@@ -20,6 +20,7 @@ export const getNonStreamingChatMsg = (
     model,
   };
 };
+
 export const getSimulatedFormData = (data: {
   [key: string]: string;
 }): FormData => {

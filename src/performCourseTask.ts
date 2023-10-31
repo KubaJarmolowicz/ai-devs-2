@@ -19,7 +19,7 @@ const fetchToken = async (taskName: string): Promise<string> => {
 
 const fetchTask = async (
   token: string,
-  config?: AIDevsAPI.CourseTaskAdditionalParams["task"]
+  config: AIDevsAPI.CourseTaskAdditionalParams["task"] = {}
 ) => {
   console.log("@@@ fetching task...");
   const { body, meta } = config;
@@ -47,7 +47,7 @@ const fetchTask = async (
 const sendAnswer = async (
   token: string,
   answer: string,
-  config?: AIDevsAPI.CourseTaskAdditionalParams["answer"]
+  config: AIDevsAPI.CourseTaskAdditionalParams["answer"] = {}
 ) => {
   const paramsOK = !!token && !!answer;
 
