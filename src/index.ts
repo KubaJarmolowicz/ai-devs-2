@@ -4,6 +4,7 @@ import { generateAnswer as moderationGA } from "./tasks/moderation";
 import { generateAnswer as bloggerGA } from "./tasks/blogger";
 import { generateAnswer as liarGA } from "./tasks/liar";
 import { generateAnswer as inPromptGA } from "./tasks/inprompt";
+import { generateAnswer as embeddingGA } from "./tasks/embedding";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -25,4 +26,5 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("inprompt", inPromptGA);
+//performCourseTask("inprompt", inPromptGA);
+performCourseTask("embedding", embeddingGA);
