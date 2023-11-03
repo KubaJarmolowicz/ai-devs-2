@@ -6,6 +6,7 @@ import { generateAnswer as liarGA } from "./tasks/liar";
 import { generateAnswer as inPromptGA } from "./tasks/inprompt";
 import { generateAnswer as embeddingGA } from "./tasks/embedding";
 import { generateAnswer as whisperGA } from "./tasks/whisper";
+import { generateAnswer as functionsGA } from "./tasks/functions";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -29,10 +30,11 @@ import { performCourseTask } from "./performCourseTask";
 // });
 //performCourseTask("inprompt", inPromptGA);
 //performCourseTask("embedding", embeddingGA);
-performCourseTask("whisper", whisperGA, {
-  answer: {
-    meta: {
-      asJSON: false,
-    },
-  },
-});
+// performCourseTask("whisper", whisperGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("functions", functionsGA);
