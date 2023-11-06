@@ -7,6 +7,7 @@ import { generateAnswer as inPromptGA } from "./tasks/inprompt";
 import { generateAnswer as embeddingGA } from "./tasks/embedding";
 import { generateAnswer as whisperGA } from "./tasks/whisper";
 import { generateAnswer as functionsGA } from "./tasks/functions";
+import { generateAnswer as rodoGA } from "./tasks/rodo";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -37,4 +38,11 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("functions", functionsGA);
+//performCourseTask("functions", functionsGA);
+performCourseTask("rodo", rodoGA, {
+  answer: {
+    meta: {
+      asJSON: false,
+    },
+  },
+});
