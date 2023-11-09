@@ -9,6 +9,7 @@ import { generateAnswer as whisperGA } from "./tasks/whisper";
 import { generateAnswer as functionsGA } from "./tasks/functions";
 import { generateAnswer as rodoGA } from "./tasks/rodo";
 import { generateAnswer as scraperGA } from "./tasks/scraper";
+import { generateAnswer as whoamiGA } from "./tasks/whoami";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -47,7 +48,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("scraper", scraperGA, {
+// performCourseTask("scraper", scraperGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("whoami", whoamiGA, {
   answer: {
     meta: {
       asJSON: false,
