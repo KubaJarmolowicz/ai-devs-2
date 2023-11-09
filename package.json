@@ -3,6 +3,7 @@
     "start": "tsc --skipLibCheck && node ./dist/index.js"
   },
   "dependencies": {
+    "@qdrant/js-client-rest": "^1.6.0",
     "dotenv": "^16.3.1",
     "langchain": "^0.0.176",
     "openai": "^4.14.0"

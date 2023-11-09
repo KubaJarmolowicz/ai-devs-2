@@ -1,7 +1,7 @@
 import { HTTP_METHODS, baseUrl } from "./consts";
 import { getSimulatedFormData } from "./utils";
 
-const fetchToken = async (taskName: string): Promise<string> => {
+const fetchToken = async (taskName: string): Promise<string | undefined> => {
   console.log("@@@ fetching token...");
   const taskPath = `/token/${taskName}`;
   const body: AIDevsAPI.FetchToken.Request = {
@@ -18,11 +18,11 @@ const fetchToken = async (taskName: string): Promise<string> => {
 };
 
 const fetchTask = async (
-  token: string,
+  token: string | undefined,
   config: AIDevsAPI.CourseTaskAdditionalParams["task"] = {}
 ) => {
   console.log("@@@ fetching task...");
-  const { body, meta } = config;
+  const { body, meta = {} } = config;
   const taskPath = `/task/${token}`;
   const taskBody = body
     ? meta.asJSON
@@ -45,7 +45,7 @@ const fetchTask = async (
 };
 
 const sendAnswer = async (
-  token: string,
+  token: string | undefined,
   answer: string,
   config: AIDevsAPI.CourseTaskAdditionalParams["answer"] = {}
 ) => {
@@ -76,7 +76,7 @@ const sendAnswer = async (
 export const performCourseTask = async (
   taskName: string,
   generateAnswer: (
-    task: unknown,
+    task: AIDevsAPI.BaseResponse,
     additionalParams?: unknown
   ) => Promise<string>,
   additionalparams?: AIDevsAPI.CourseTaskAdditionalParams
@@ -88,7 +88,7 @@ export const performCourseTask = async (
     const answer = await generateAnswer(task, additionalparams?.task);
     const response = await sendAnswer(token, answer, additionalparams?.answer);
 
-    if (response?.code === 0) {
+    if ((response as AIDevsAPI.BaseResponse)?.code === 0) {
       return console.log(`!!! SUCCESS !!! ${taskName} completed succesfully!`);
     }
 

@@ -15,7 +15,7 @@ declare namespace AIDevsAPI {
 
   namespace FetchTask {
     type Response = BaseResponse & {
-      [key as string]: unknown;
+      [key: string]: unknown;
     };
   }
 
@@ -25,13 +25,20 @@ declare namespace AIDevsAPI {
         question?: string;
       };
       meta?: {
-        asJSON?: booelan;
+        asJSON?: boolean;
       };
     };
     answer?: {
       meta?: {
-        asJSON?: booelan;
+        asJSON?: boolean;
       };
     };
+  };
+
+  type UnknowRecord = {
+    title: string;
+    url: string;
+    info: string;
+    date: string;
   };
 }
