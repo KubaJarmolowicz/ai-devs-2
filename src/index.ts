@@ -11,6 +11,7 @@ import { generateAnswer as rodoGA } from "./tasks/rodo";
 import { generateAnswer as scraperGA } from "./tasks/scraper";
 import { generateAnswer as whoamiGA } from "./tasks/whoami";
 import { generateAnswer as searchGA } from "./tasks/search";
+import { generateAnswer as peopleGA } from "./tasks/people";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -63,7 +64,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("search", searchGA, {
+// performCourseTask("search", searchGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("people", peopleGA, {
   answer: {
     meta: {
       asJSON: false,
