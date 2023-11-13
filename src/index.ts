@@ -12,6 +12,7 @@ import { generateAnswer as scraperGA } from "./tasks/scraper";
 import { generateAnswer as whoamiGA } from "./tasks/whoami";
 import { generateAnswer as searchGA } from "./tasks/search";
 import { generateAnswer as peopleGA } from "./tasks/people";
+import { generateAnswer as knowledgeGA } from "./tasks/knowledge";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -71,7 +72,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("people", peopleGA, {
+// performCourseTask("people", peopleGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("knowledge", knowledgeGA, {
   answer: {
     meta: {
       asJSON: false,
