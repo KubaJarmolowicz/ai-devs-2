@@ -13,6 +13,7 @@ import { generateAnswer as whoamiGA } from "./tasks/whoami";
 import { generateAnswer as searchGA } from "./tasks/search";
 import { generateAnswer as peopleGA } from "./tasks/people";
 import { generateAnswer as knowledgeGA } from "./tasks/knowledge";
+import { generateAnswer as toolsGA } from "./tasks/tools";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -79,7 +80,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("knowledge", knowledgeGA, {
+// performCourseTask("knowledge", knowledgeGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("tools", toolsGA, {
   answer: {
     meta: {
       asJSON: false,

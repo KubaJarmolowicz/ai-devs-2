@@ -58,11 +58,11 @@ const sendAnswer = async (
   const { meta = { asJSON: true } } = config;
 
   const parsedAnswer = meta?.asJSON ? JSON.parse(answer) : answer;
-  console.log("@@@ sending the following answer => ", parsedAnswer);
   const taskPath = `/answer/${token}`;
   const body = {
     answer: parsedAnswer,
   };
+  console.log("@@@ sending the following answer => ", JSON.stringify(body));
   const resData: AIDevsAPI.BaseResponse = await fetch(`${baseUrl}${taskPath}`, {
     method: HTTP_METHODS.POST,
     body: JSON.stringify(body),
