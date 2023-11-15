@@ -10,4 +10,5 @@ export enum MODELS {
   GPT_4 = "gpt-4",
   TEXT_EMBEDDING_ADA_002 = "text-embedding-ada-002",
   WHISPER = "whisper-1",
+  VISION = "gpt-4-vision-preview",
 }
