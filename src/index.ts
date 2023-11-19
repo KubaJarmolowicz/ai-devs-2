@@ -103,7 +103,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("ownapi", ownapiGA, {
+// performCourseTask("ownapi", ownapiGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("ownapipro", ownapiGA, {
   answer: {
     meta: {
       asJSON: false,
