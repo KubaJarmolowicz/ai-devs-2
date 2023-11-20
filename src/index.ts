@@ -16,6 +16,7 @@ import { generateAnswer as knowledgeGA } from "./tasks/knowledge";
 import { generateAnswer as toolsGA } from "./tasks/tools";
 import { generateAnswer as gnomeGA } from "./tasks/gnome";
 import { generateAnswer as ownapiGA } from "./tasks/ownapi";
+import { generateAnswer as memeGA } from "./tasks/meme";
 import { performCourseTask } from "./performCourseTask";
 
 //performCourseTask("helloapi", heloApiGA);
@@ -110,7 +111,14 @@ import { performCourseTask } from "./performCourseTask";
 //     },
 //   },
 // });
-performCourseTask("ownapipro", ownapiGA, {
+// performCourseTask("ownapipro", ownapiGA, {
+//   answer: {
+//     meta: {
+//       asJSON: false,
+//     },
+//   },
+// });
+performCourseTask("meme", memeGA, {
   answer: {
     meta: {
       asJSON: false,
