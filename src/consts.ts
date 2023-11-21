@@ -7,6 +7,7 @@ export enum HTTP_METHODS {
 
 export enum MODELS {
   GPT_3_5_turbo = "gpt-3.5-turbo",
+  GPT_3_5_turbo_16k = "gpt-3.5-turbo-16k",
   GPT_4 = "gpt-4",
   TEXT_EMBEDDING_ADA_002 = "text-embedding-ada-002",
   WHISPER = "whisper-1",
